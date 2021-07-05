@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <link rel="shortcut icon" href="img/logo.gif" type="image/x-icon">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>VALIDAR CEDULA</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="app.js"></script>
+    <!--     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"> -->
+
+</head>
+
+<body>
+
+    <div class="container">
+
+        <head>
+            <img src="img/logo.gif" alt="">
+            <h1>🍺 Cerveceria Vegana S.R.L</h1>
+            <hr>
+        </head>
+
+        <div class="w3-content">
+
+            <img class="mySlides" src="img/img1.jpg">
+
+            <img class="mySlides" src="img/img2.jpg">
+
+            <img class="mySlides" src="img/img3.png">
+
+            <img class="mySlides" src="img/img4.png">
+
+            <div class="titulo">
+                <h2>👁‍🗨 Consultar Solo Cédulas Dominicanas</h2>
+            </div>
+
+            <div class="caja">
+
+                <input class="cedula" type="text" name="cedula" id="cedula" placeholder="Introduzca la Cédula 🔍" maxlength="11">
+
+            </div>
+
+            <button onclick="valida()">Validar</button>
+
+            <hr>
+
+            <div id="result"></div>
+
+
+            <br>
+            <br>
+
+
+            <footer>
+                <h2 class="mensaje">@ 2021-JPV- Puedes Visualizar desde el Movil</h2>
+            </footer>
+
+
+
+        </div>
+
+
+        <script>
+            var slideIndex = 0;
+            carousel();
+
+            function carousel() {
+                var i;
+                var x = document.getElementsByClassName("mySlides");
+                for (i = 0; i < x.length; i++) {
+                    x[i].style.display = "none";
+                }
+                slideIndex++;
+                if (slideIndex > x.length) {
+                    slideIndex = 1
+                }
+                x[slideIndex - 1].style.display = "block";
+                setTimeout(carousel, 3000);
+            }
+        </script>
+
+
+</body>
+
+</html>
